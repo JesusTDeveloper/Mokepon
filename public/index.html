@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MOKEPON!</title>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">Mokepon Online</h1>
+            
+            <h2 class="subtitulo">Elige a tu mascota:</h2>
+
+            <div id="contenedor-tarjetas" class="tarjetas">
+            </div>
+
+            <button id="boton-mascota">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+            <canvas id="mapa"></canvas>
+            <button
+                onmouseup="detenerMovimiento()"
+                ontouchend="detenerMovimiento()"
+                onmousedown="moverArriba()"
+                ontouchstart="moverArriba()"
+            >Arriba</button>
+            <div>
+                <button
+                onmouseup="detenerMovimiento()"
+                ontouchend="detenerMovimiento()"
+                onmousedown="moverIzquierda()"
+                ontouchstart="moverIzquierda()"
+                >Izquierda</button>
+                <button
+                onmouseup="detenerMovimiento()"
+                ontouchend="detenerMovimiento()"
+                onmousedown="moverDerecha()"
+                ontouchstart="moverDerecha()"
+                >Derecha</button>
+            </div>
+            <button
+                onmouseup="detenerMovimiento()"
+                ontouchend="detenerMovimiento()"
+                onmousedown="moverAbajo()"
+                ontouchstart="moverAbajo()"
+            >Abajo</button>
+        </section>
+        
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">Mokepon Online</h1>
+
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+
+            <div id="contenedor-ataques" class="tarjetas-ataques">
+            </div>
+
+                <div id="mensajes">
+                    <p id="resultado">Mucha suerte☘️</p>
+
+                    <section id="reiniciar">
+                        <button id="boton-reiniciar">Reiniciar</button>
+                    </section>
+                </div>
+
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">0</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-del-jugador"></div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">0</p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataques-del-enemigo"></div>
+                </div>   
+            </div>
+        </section>
+
+        <footer>
+            <h4>By JesusTDeveloper</h4>
+            <div class="iconos-redes">
+                <a href="https://www.linkedin.com/in/jes%C3%BAs-javier-torres-446b33244/" target="_blank"><img src="./assets/linkedin.png" alt="linkedin"></a>
+                <a href="https://github.com/JesusTDeveloper" target="_blank"><img src="./assets/github.png" alt="github"></a>
+            </div>
+        </footer>
+        
+}
+        <script src="./js/mokepon.js"></script>
+    </body>
+</html>
